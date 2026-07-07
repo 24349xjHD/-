@@ -1,0 +1,11 @@
+python scripts/train_lora.py \
+  --base_model_name ./Qwen3.5-4B \
+  --train_jsonl ./data/train.jsonl \
+  --test_jsonl ./data/test.jsonl \
+  --output_dir ./output \
+  --num_train_epochs 5 \
+  --eval_num_samples 200 \
+  --eval_seed 42 \
+  --eval_save_text false \
+  --eval_thresholds 1.0,2.0,3.0 \
+  --resume true
